@@ -1,0 +1,20 @@
+import java.util.Scanner;
+class ExceptionHandlingDemo
+{
+	public static void main(String args[])
+	{
+		try
+		{
+			int arr[]= new int[5];
+			arr[4]=10;
+		}	
+		catch(ArrayIndexOutOfBoundsException y)
+		{
+			System.out.println("Exception Alert");
+		}
+		finally
+		{
+		System.out.println("End");
+		}
+	}
+}
