@@ -1,0 +1,31 @@
+Tara has been assigned a task by her friends to retrieve a character that appears most number of the times in a given sequence.
+If the frequency of two or more characters is same than return the first character that occurs in the string among them.
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String inputString = scanner.nextLine();
+        int[] frequencyTable = new int[256];
+        for (int i = 0; i < inputString.length(); i++) {
+            char ch = inputString.charAt(i);
+            if (Character.isLetterOrDigit(ch)) {
+                frequencyTable[ch]++;
+            } else {
+                System.out.println("Error");
+                return;
+            }
+        }
+        char maxChar = '\0';
+        int maxFreq = 0;
+        for (int i = 0; i < 256; i++) {
+            if (frequencyTable[i] > maxFreq) {
+                maxChar = (char) i;
+                maxFreq = frequencyTable[i];
+            }
+        }
+
+        System.out.println("Maximum occurring character is: " + maxChar);
+    }
+}

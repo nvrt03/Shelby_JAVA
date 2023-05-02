@@ -1,0 +1,22 @@
+Sonal built up a software code taking ratings on a product. The product is supposed to be rated between 1 to 5. Create a program displaying an error "101" 
+if the rating is not between 1 to 5, else displaying "thanks".
+
+import java.util.Scanner;
+
+public class Product 
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        double rating = sc.nextDouble();
+        sc.close();
+        if (rating >= 1 && rating <= 5)
+        {
+            System.out.println("Thanks");
+        }
+        else
+        {
+            System.out.println("Error: 101");
+        }
+    }
+}

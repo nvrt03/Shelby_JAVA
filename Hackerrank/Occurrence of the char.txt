@@ -1,0 +1,19 @@
+Shan is playing a game with little raghav. Shan provide a string and a char to raghav and raghav counts the occurrence of same char in the string. 
+write a program to help the raghav to find the occurrence of the char in the string.
+
+import java.util.Scanner;
+
+public class Shan {
+  public static void main(String args[]) {
+    Scanner scan = new Scanner(System.in);
+    String str = scan.nextLine();
+    char c = scan.next().charAt(0);
+    int count = 0;
+    for (int i = 0; i < str.length(); i++) {
+      if (str.charAt(i) == c) {
+        count++;
+      }
+    }
+    System.out.println(count);
+  }
+}

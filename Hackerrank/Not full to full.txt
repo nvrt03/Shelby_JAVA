@@ -1,0 +1,22 @@
+Liz built up a software code taking number of 3 different color blocks as input. Considering the end users can enter floating point numbers too as at least 
+1 block of a color is broken. Design the code converting the not-full numbers to full numbers.
+
+import java.util.Scanner;
+
+public class Liz 
+{
+    public static void main(String args[]) 
+    {
+        Scanner sc = new Scanner(System.in);
+        int[] arr = new int[3];
+        for (int i = 0; i < 3; i++) 
+        {
+            arr[i] = (int) Math.ceil(sc.nextDouble());
+        }
+        for (int i = 0; i < 3; i++) 
+        {
+            System.out.print(arr[i] + " ");
+        }
+        sc.close();
+    }
+}

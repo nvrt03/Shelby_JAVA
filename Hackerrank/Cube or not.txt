@@ -1,0 +1,21 @@
+Alex has got a Mathematical assignment where he has to find whether a given integer N is a Perfect Cube or not.Write a Java program solution to help Alex
+
+import java.util.Scanner;
+
+public class Solution 
+{
+    public static void main(String args[]) 
+    {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        double cubeRoot = Math.cbrt(n);
+        if (cubeRoot == (int) cubeRoot) 
+        {
+            System.out.println("Perfect Cube");
+        } 
+        else 
+        {
+            System.out.println("Not Perfect Cube");
+        }
+    }
+}

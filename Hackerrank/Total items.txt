@@ -1,0 +1,16 @@
+Consider that two friends Neha and Nisha are going for shopping .Neha has picked the N number of Items from the Market and Nisha has picked X number of 
+Items from the Market .Find out total numbers of Items ordered by both .
+
+import java.util.Scanner;
+public class Market 
+{
+    public static void main(String args[]) 
+    {
+        Scanner sc = new Scanner(System.in);
+        int nehaItems = sc.nextInt();
+        int nishaItems = sc.nextInt();
+        sc.close();
+        int totalItems = nehaItems + nishaItems;
+        System.out.println(totalItems);
+    }
+}

@@ -1,0 +1,34 @@
+Vijay and Gaurav are two friends. They are playing a game to check that whether the first word is similar to second or not. For example first word is "loop" and 
+second is "lloooopp". These words will be considered similar as characters are same and in first word 'l' is occuring 1 time, 'o' is 2 times and 'p' is 1 time i.e 
+occurance of 'l'= occurance of 'p' and occurance of 'o' is double than the occurance of 'l' and 'p'. Help them using program.
+
+import java.util.*;
+public class Friends {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    String a = sc.next();
+    String b = sc.next();
+    int[] countA = new int[26];
+    int[] countB = new int[26];
+    for (int i = 0; i < a.length(); i++) {
+      countA[a.charAt(i) - 'a']++;
+    }
+    for (int i = 0; i < b.length(); i++) {
+      countB[b.charAt(i) - 'a']++;
+    }
+    Arrays.sort(countA);
+    Arrays.sort(countB);
+    boolean flag = true;
+    for (int i = 0; i < 26; i++) {
+      if (countA[i] != countB[i]) {
+        flag = false;
+        break;
+      }
+    }
+    if (flag) {
+      System.out.println("Similar");
+    } else {
+      System.out.println("Not Similar");
+    }
+  }
+}

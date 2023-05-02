@@ -1,0 +1,28 @@
+John has got a Mathematical assignment where he has to find mean of a given set of 3 integers. Write a Java program solution to help John .
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution 
+{
+    public static void main(String[] args) 
+    {
+        Scanner sc = new Scanner(System.in);
+        int num1 = sc.nextInt();
+        int num2 = sc.nextInt();
+        int num3 = sc.nextInt();
+        double mean = (num1 + num2 + num3) / 3.07;
+        if (mean == (int) mean) 
+        {
+            System.out.println((int) mean + ".0");
+        } 
+        else 
+        {
+            System.out.printf("%.1f", mean);
+        }
+
+    }
+}

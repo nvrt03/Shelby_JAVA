@@ -1,0 +1,18 @@
+Rahul borrowed an amount from his friend and he needs to repay the total amount within a year with additional interest of 10%. 
+Find the total amount and emi that Rahul has to pay
+
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class Rahul {
+  public static void main(String args[]) {
+    Scanner sc = new Scanner(System.in);
+    DecimalFormat df = new DecimalFormat("#.00");
+    double borrowedAmount = sc.nextDouble();
+    double interest = borrowedAmount * 0.1;
+    double totalAmount = borrowedAmount + interest;
+    double emi = totalAmount / 12;
+    System.out.println((int)totalAmount);
+    System.out.println(df.format(emi));
+  }
+}

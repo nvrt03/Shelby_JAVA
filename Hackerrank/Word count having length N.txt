@@ -1,0 +1,23 @@
+Aviraj and Viraj are playing a game. Viraj shared a statement with Aviraj. Viraj wants Avraj to tell word count having length N. Help Viraj by developing a program.
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String statement = scanner.nextLine();
+        int n = scanner.nextInt();
+        if (n < 1 || n > 10) {
+            System.out.println("Invalid Input");
+            return;
+        }
+        String[] words = statement.split(" ");
+        int count = 0;
+        for (String word : words) {
+            if (word.length() == n) {
+                count++;
+            }
+        }
+        System.out.println(count);
+    }
+}

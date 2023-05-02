@@ -1,0 +1,25 @@
+A student will not be allowed to sit in exam if his/her attendence is less than 75%. Take following input from user Number of classes held Number of classes attended. 
+And print percentage of class attended Is student is allowed to sit in exam or not.
+
+import java.util.Scanner;
+
+public class Attendence 
+{
+    public static void main(String[] args) 
+    {
+        Scanner sc = new Scanner(System.in);
+        int classesHeld = sc.nextInt();
+        int classesAttended = sc.nextInt();
+        sc.close();
+        int percentAttended = (classesAttended * 100) / classesHeld;
+        System.out.println(percentAttended);
+        if (percentAttended >= 75) 
+        {
+            System.out.println("Yes");
+        } 
+        else
+        {
+            System.out.println("No");
+        }
+    }
+}

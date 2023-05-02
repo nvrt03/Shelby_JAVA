@@ -1,0 +1,22 @@
+Write a program to take one input of double type from the user. If the value is positive convert it into int and display it, 
+otherwise display the message “Invalid Input”.
+
+import java.util.Scanner;
+
+public class Double 
+{
+	public static void main(String args[]) 
+    {
+    Scanner sc = new Scanner(System.in);
+    double num = sc.nextDouble();
+    if (num >= 0) 
+    {
+    int intNum = (int) num;
+    System.out.println(intNum);
+    } 
+    else 
+    {
+      System.out.println("Invalid Input");
+    }
+  }
+}

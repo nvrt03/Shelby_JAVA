@@ -1,0 +1,34 @@
+Dr. Max has conducted the academic task in his class with 5 Multiple Choice Questions each having 4 options A/B/C/D. He wanted to write a program which can 
+evaluate the test papers of all the N students such that each correct answer is awarded 1 mark and for incorrect answer penalty is 0.25 marks.The program must read the 
+number of students N and the the answers of all the N students in the form of a String. If any question is not attempted by any student, then X should be given as input 
+corresponding to that question e.g. ABAXD. It is expected that the marks of all the N students are displayed separated by SPACE.
+
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String correctAnswers = scanner.nextLine().toUpperCase();
+        int n = scanner.nextInt();
+        scanner.nextLine(); // consume newline
+        for (int i = 0; i < n; i++) {
+            String studentAnswers = scanner.nextLine().toUpperCase();
+            if (studentAnswers.length() != correctAnswers.length()) {
+                System.out.println("Incorrect Input");
+                return;
+            }
+            double marks = 0.0;
+            for (int j = 0; j < correctAnswers.length(); j++) {
+                if (studentAnswers.charAt(j) == 'X') {
+                    continue;
+                }
+                if (studentAnswers.charAt(j) == correctAnswers.charAt(j)) {
+                    marks += 1.0;
+                } else {
+                    marks -= 0.25;
+                }
+            }
+            System.out.print(marks + " ");
+        }
+    }
+}

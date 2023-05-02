@@ -1,0 +1,34 @@
+Kumar has been given a string and asked to determine whether it can be converted into a palindrome after removing at most one character
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String str = scanner.nextLine();
+        int i = 0, j = str.length() - 1;
+        while (i < j) {
+            if (str.charAt(i) != str.charAt(j)) {
+                if (isPalindrome(str, i + 1, j) || isPalindrome(str, i, j - 1)) {
+                    System.out.println("true");
+                    return;
+                } else {
+                    System.out.println("false");
+                    return;
+                }
+            }
+            i++;
+            j--;
+        }
+        System.out.println("true");
+    }
+    private static boolean isPalindrome(String str, int start, int end) {
+        while (start < end) {
+            if (str.charAt(start) != str.charAt(end)) {
+                return false;
+            }
+            start++;
+            end--;
+        }
+        return true;
+    }
+}

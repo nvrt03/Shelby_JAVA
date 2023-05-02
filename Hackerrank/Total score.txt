@@ -1,0 +1,16 @@
+Consider that there is a cricket player named Smith who hits certain number of 4s and 6s in a cricket match. 
+Find out total numbers of scores he makes with his 4s & 6s only.
+
+import java.util.Scanner;
+
+public class Main 
+{
+    public static void main(String args[]) 
+    {
+        Scanner sc = new Scanner(System.in);
+        int num4s = sc.nextInt();
+        int num6s = sc.nextInt();
+        int totalScore = num4s * 4 + num6s * 6;
+        System.out.println(totalScore);
+    }
+}
