@@ -1,0 +1,54 @@
+import java.util.Scanner;
+class university
+{
+	int reg_no;
+	university(int r)
+	{
+		System.out.println("University Constructor");
+		reg_no=r;
+	}
+	void print()
+	{
+		System.out.println("The registration number: "+reg_no);
+	}
+}
+class details extends university
+{
+	String name;
+	details(int r, String n)
+	{
+		super(r);
+		System.out.println("Deatils Constructor");
+		name=n;
+	}
+	void print()
+	{();
+		super.print
+		System.out.println("The Name: "+name);
+	}
+}
+class info extends details
+{
+	String course;
+	info(int r, String n, String c)
+	{
+		super(r,n);
+		System.out.println("Info Constructor");
+		course=c;
+	}
+	void print()
+	{
+		super.print();
+		System.out.println("The Course: "+course);
+	}
+}
+class Inheritance1
+{
+	public static void main(String args[])
+	{
+		
+		info i= new info(101, "abc", "ece");
+		i.print();
+		
+	}
+}

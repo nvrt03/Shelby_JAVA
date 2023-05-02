@@ -1,0 +1,33 @@
+write a program to create a class shape with two data members d1 and d2 od type double create a parametric constructor that will initialize the data member and a 
+function name area with no argument type but its return type as double create another class rectangle with a parametric constructor that causes the constructor of 
+class shape and a function area with no return type and argument type as double that returns the area of rectangle
+
+class Shape {
+    double d1, d2;
+    
+    public Shape(double d1, double d2) {
+        this.d1 = d1;
+        this.d2 = d2;
+    }
+    
+    public double area() {
+        return 0;
+    }
+}
+
+class Rectangle extends Shape {
+    public Rectangle(double d1, double d2) {
+        super(d1, d2);
+    }
+    
+    public double area() {
+        return d1 * d2;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Rectangle r = new Rectangle(5.0, 3.0);
+        System.out.println("Area of Rectangle: " + r.area());
+    }
+}
